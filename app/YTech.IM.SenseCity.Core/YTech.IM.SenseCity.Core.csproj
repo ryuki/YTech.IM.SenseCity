@@ -40,8 +40,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="NHibernate.Validator, Version=1.3.0.1001, Culture=neutral, PublicKeyToken=70154e18752585bd, processorArchitecture=MSIL">
+    <Reference Include="NHibernate.Validator, Version=1.2.0.3001, Culture=neutral, PublicKeyToken=70154e18752585bd, processorArchitecture=MSIL">
       <HintPath>..\..\lib\NHibernate.Validator.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="SharpArch, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\lib\SharpArch.dll</HintPath>
@@ -61,10 +62,91 @@
     <Compile Include="..\..\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Master\MAccount.cs" />
+    <Compile Include="Master\MAccountCat.cs" />
+    <Compile Include="Master\MAccountRef.cs" />
+    <Compile Include="Master\MBrand.cs" />
+    <Compile Include="Master\MCostCenter.cs" />
+    <Compile Include="Master\MCustomer.cs" />
+    <Compile Include="Master\MDepartment.cs" />
+    <Compile Include="Master\MEmployee.cs" />
+    <Compile Include="Master\MItem.cs" />
+    <Compile Include="Master\MItemCat.cs" />
+    <Compile Include="Master\MItemUom.cs" />
+    <Compile Include="Master\MPacket.cs" />
+    <Compile Include="Master\MPacketComm.cs" />
+    <Compile Include="Master\MPacketItemCat.cs" />
+    <Compile Include="Master\MPromo.cs" />
+    <Compile Include="Master\MRoom.cs" />
+    <Compile Include="Master\MSupplier.cs" />
+    <Compile Include="Master\MWarehouse.cs" />
+    <Compile Include="Master\RefAddress.cs" />
+    <Compile Include="Master\RefPerson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryInterfaces\IMAccountCatRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IMAccountRefRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IMAccountRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IMBrandRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IMCostCenterRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IMCustomerRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IMDepartmentRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IMEmployeeRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IMItemCatRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IMItemRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IMItemUomRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IMPacketCommRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IMPacketItemCatRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IMPacketRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IMPromoRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IMRoomRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IMSupplierRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IMWarehouseRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IRefAddressRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IRefPersonRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITAbsentRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITJournalDetRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITJournalRefRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITJournalRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITRecAccountRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITRecPeriodRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITReferenceRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITReservationDetailRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITReservationRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITShiftRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITStockCardRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITStockItemRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITStockRefRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITStockRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITTransDetItemRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITTransDetRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITTransRefRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITTransRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITTransRoomRepository.cs" />
+    <Compile Include="Transaction\Accounting\TJournal.cs" />
+    <Compile Include="Transaction\Accounting\TJournalDet.cs" />
+    <Compile Include="Transaction\Accounting\TJournalRef.cs" />
+    <Compile Include="Transaction\Accounting\TRecAccount.cs" />
+    <Compile Include="Transaction\Accounting\TRecPeriod.cs" />
+    <Compile Include="Transaction\HR\TAbsent.cs" />
+    <Compile Include="Transaction\Inventory\TShift.cs" />
+    <Compile Include="Transaction\Inventory\TStock.cs" />
+    <Compile Include="Transaction\Inventory\TStockCard.cs" />
+    <Compile Include="Transaction\Inventory\TStockItem.cs" />
+    <Compile Include="Transaction\Inventory\TStockRef.cs" />
+    <Compile Include="Transaction\Inventory\TTrans.cs" />
+    <Compile Include="Transaction\Inventory\TTransDet.cs" />
+    <Compile Include="Transaction\Inventory\TTransDetItem.cs" />
+    <Compile Include="Transaction\Inventory\TTransRef.cs" />
+    <Compile Include="Transaction\Inventory\TTransRoom.cs" />
+    <Compile Include="Transaction\Reservation\TReservation.cs" />
+    <Compile Include="Transaction\Reservation\TReservationDetail.cs" />
+    <Compile Include="Transaction\TReference.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="RepositoryInterfaces\" />
+    <ProjectReference Include="..\YTech.IM.SenseCity.Enums\YTech.IM.SenseCity.Enums.csproj">
+      <Project>{4E04252B-2B8B-468D-8936-6A7F86568196}</Project>
+      <Name>YTech.IM.SenseCity.Enums</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

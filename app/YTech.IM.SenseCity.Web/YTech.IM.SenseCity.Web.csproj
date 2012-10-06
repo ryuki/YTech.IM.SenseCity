@@ -18,6 +18,7 @@
     </FileUpgradeFlags>
     <OldToolsVersion>4.0</OldToolsVersion>
     <UpgradeBackupLocation />
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,19 +42,26 @@
   <ItemGroup>
     <Reference Include="Castle.Core, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\..\lib\Castle.Core.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Castle.MicroKernel">
+      <HintPath>..\..\lib\Castle.MicroKernel.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Windsor, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\..\lib\Castle.Windsor.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="CommonServiceLocator.WindsorAdapter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\CommonServiceLocator.WindsorAdapter.dll</HintPath>
     </Reference>
-    <Reference Include="FluentNHibernate, Version=1.2.0.694, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+    <Reference Include="FluentNHibernate, Version=1.1.0.685, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
       <HintPath>..\..\lib\FluentNHibernate.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\..\lib\Iesi.Collections.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="Inflector.Net, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -67,31 +75,56 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Web.Mvc, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\Microsoft.Web.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="MvcContrib, Version=2.0.96.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="MvcContrib, Version=2.0.36.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\lib\MvcContrib.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="MvcContrib.Castle, Version=2.0.36.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\MvcContrib.Castle.dll</HintPath>
     </Reference>
     <Reference Include="MvcContrib.FluentHtml, Version=2.0.36.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\lib\MvcContrib.FluentHtml.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="MvcMembership, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\MvcMembership.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+    <Reference Include="NHibernate, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\..\lib\NHibernate.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="NHibernate.ByteCode.Castle, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+    <Reference Include="NHibernate.ByteCode.Castle, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\..\lib\NHibernate.ByteCode.Castle.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="NHibernate.Validator, Version=1.3.0.1001, Culture=neutral, PublicKeyToken=70154e18752585bd, processorArchitecture=MSIL">
+    <Reference Include="NHibernate.Validator, Version=1.2.0.3001, Culture=neutral, PublicKeyToken=70154e18752585bd, processorArchitecture=MSIL">
       <HintPath>..\..\lib\NHibernate.Validator.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="SharpArch, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="SharpArch, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\lib\SharpArch.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -141,18 +174,217 @@
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportViewer.aspx.cs">
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportViewer.aspx.designer.cs">
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\complex.css" />
+    <Content Include="Content\css\jquery_news_ticker\images\controls.png" />
+    <Content Include="Content\css\jquery_news_ticker\images\dl-arr.png" />
+    <Content Include="Content\css\jquery_news_ticker\images\down-arr.gif" />
+    <Content Include="Content\css\jquery_news_ticker\images\forkme.png" />
+    <Content Include="Content\css\jquery_news_ticker\images\main-red-bg.gif" />
+    <Content Include="Content\css\jquery_news_ticker\styles\style.css" />
+    <Content Include="Content\css\jquery_news_ticker\styles\ticker-style.css" />
+    <Content Include="Content\css\layout-default-latest.css" />
+    <Content Include="Content\css\master.css" />
+    <Content Include="Content\css\samplebrowser.css" />
+    <Content Include="Content\css\start\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Content\css\start\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Content\css\start\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Content\css\start\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Content\css\start\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Content\css\start\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Content\css\start\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Content\css\start\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Content\css\start\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\css\start\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="Content\css\start\images\ui-icons_056b93_256x240.png" />
+    <Content Include="Content\css\start\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\css\start\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Content\css\start\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="Content\css\start\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Content\css\start\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="Content\css\start\jquery-ui.css" />
+    <Content Include="Content\Images\arrow.png" />
+    <Content Include="Content\Images\background.gif" />
+    <Content Include="Content\Images\background.jpg" />
+    <Content Include="Content\Images\bot-left.png" />
+    <Content Include="Content\Images\bot-middle.png" />
+    <Content Include="Content\Images\bot-right.png" />
+    <Content Include="Content\Images\bottombg.png" />
+    <Content Include="Content\Images\bottomleft.png" />
+    <Content Include="Content\Images\bottomright.png" />
+    <Content Include="Content\Images\browser-png.png" />
+    <Content Include="Content\Images\cart.png" />
+    <Content Include="Content\Images\color_palette.png" />
+    <Content Include="Content\Images\compability.png" />
+    <Content Include="Content\Images\ConditionalFormattingHighlight.png" />
+    <Content Include="Content\Images\cross.gif" />
+    <Content Include="Content\Images\CustomFormattingHighlight.png" />
+    <Content Include="Content\Images\DynamicSelectedSkins.png" />
+    <Content Include="Content\Images\faq.png" />
+    <Content Include="Content\Images\fooer_logo.png" />
+    <Content Include="Content\Images\Grid-Header-Image.png" />
+    <Content Include="Content\Images\header.png" />
+    <Content Include="Content\Images\holdernew.png" />
+    <Content Include="Content\Images\home-icon.png" />
+    <Content Include="Content\Images\hoverSkins.png" />
+    <Content Include="Content\Images\l.gif" />
+    <Content Include="Content\Images\logo.jpg" />
+    <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\Mvc2Validation.png" />
+    <Content Include="Content\Images\navigation-menu.png" />
+    <Content Include="Content\Images\New.png" />
+    <Content Include="Content\Images\new_header.png" />
+    <Content Include="Content\Images\Next.gif" />
+    <Content Include="Content\Images\product.png" />
+    <Content Include="Content\Images\r.gif" />
+    <Content Include="Content\Images\remembermilk_orange.gif" />
+    <Content Include="Content\Images\sense logo.jpg" />
+    <Content Include="Content\Images\settings.png" />
+    <Content Include="Content\Images\sfheader.png" />
+    <Content Include="Content\Images\shadow.png" />
     <Content Include="Content\Images\sharp_arch.jpg" />
     <Content Include="Content\Images\sharp_arch_small.gif" />
+    <Content Include="Content\Images\SkinsSelection.png" />
+    <Content Include="Content\Images\SmallImages.png" />
+    <Content Include="Content\Images\tableft.png" />
+    <Content Include="Content\Images\tabmiddle.png" />
+    <Content Include="Content\Images\tabright.png" />
+    <Content Include="Content\Images\top-left.png" />
+    <Content Include="Content\Images\top-middle.png" />
+    <Content Include="Content\Images\top-right.png" />
+    <Content Include="Content\Images\topbg.png" />
+    <Content Include="Content\Images\topleft.png" />
+    <Content Include="Content\Images\topright.png" />
+    <Content Include="Content\Images\Trial-Button.png" />
+    <Content Include="Content\Images\window16.gif" />
+    <Content Include="Content\img\80ade5_40x100_textures_04_highlight_hard_100.png" />
+    <Content Include="Content\img\D1E6FC_40x100_textures_10_dots_medium_90.png" />
+    <Content Include="Content\img\d6d6d6_40x100_textures_02_glass_80.png" />
+    <Content Include="Content\img\eeeeee_40x100_textures_02_glass_90.png" />
+    <Content Include="Content\img\go-dn-off.gif" />
+    <Content Include="Content\img\go-dn-on.gif" />
+    <Content Include="Content\img\go-lt-off.gif" />
+    <Content Include="Content\img\go-lt-on.gif" />
+    <Content Include="Content\img\go-rt-off.gif" />
+    <Content Include="Content\img\go-rt-on.gif" />
+    <Content Include="Content\img\go-up-off.gif" />
+    <Content Include="Content\img\go-up-on.gif" />
+    <Content Include="Content\img\pin-dn-off.gif" />
+    <Content Include="Content\img\pin-dn-on.gif" />
+    <Content Include="Content\img\pin-up-off.gif" />
+    <Content Include="Content\img\pin-up-on.gif" />
+    <Content Include="Content\img\resizable-e.gif" />
+    <Content Include="Content\img\resizable-n.gif" />
+    <Content Include="Content\img\resizable-s.gif" />
+    <Content Include="Content\img\resizable-w.gif" />
+    <Content Include="Content\img\toggle-dn.gif" />
+    <Content Include="Content\img\toggle-lt.gif" />
+    <Content Include="Content\img\toggle-rt.gif" />
+    <Content Include="Content\img\toggle-up.gif" />
+    <Content Include="Content\MvcMembership.css" />
+    <Content Include="Content\ui.jqgrid.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="NHibernate.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="ReportViewer.aspx" />
+    <Content Include="Scripts\autoNumeric-1.6.2.js" />
+    <Content Include="Scripts\complex.js" />
+    <Content Include="Scripts\date.format.js" />
+    <Content Include="Scripts\default.js" />
+    <Content Include="Scripts\grid.locale-en.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.colorbox-min.js" />
+    <Content Include="Scripts\jquery.jqGrid-4.1.2.min.js" />
+    <Content Include="Scripts\jquery.jqGrid.min.js" />
+    <Content Include="Scripts\jquery.layout.min.js" />
+    <Content Include="Scripts\jquery.layout.state.js" />
+    <Content Include="Scripts\jquery.maskedinput-1.2.2.min.js" />
+    <Content Include="Scripts\jquery.mousewheel-3.0.4.js" />
+    <Content Include="Scripts\jquery.ticker.js" />
+    <Content Include="Scripts\jquery.tooltip.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\NumberFormat.js" />
+    <Content Include="Scripts\Templates\MicrosoftAjax.js" />
+    <Content Include="Scripts\Templates\MicrosoftAjaxAdoNet.js" />
+    <Content Include="Scripts\Templates\MicrosoftAjaxTemplates.js" />
+    <Content Include="Views\CRM\Reservation\AddNew.aspx" />
+    <Content Include="Views\CRM\Reservation\Index.aspx" />
     <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Master\Account\Index.aspx" />
+    <Content Include="Views\Master\Account\Search.aspx" />
+    <Content Include="Views\Master\Brand\Index.aspx" />
+    <Content Include="Views\Master\CostCenter\Index.aspx" />
+    <Content Include="Views\Master\Customer\Index.aspx" />
+    <Content Include="Views\Master\Customer\Search.aspx" />
+    <Content Include="Views\Master\Department\Index.aspx" />
+    <Content Include="Views\Master\Employee\Index.aspx" />
+    <Content Include="Views\Master\Employee\Search.aspx" />
+    <Content Include="Views\Master\Item\Index.aspx" />
+    <Content Include="Views\Master\Item\Search.aspx" />
+    <Content Include="Views\Master\MItemCat\Index.aspx" />
+    <Content Include="Views\Master\PacketComm\PopupAdd.aspx" />
+    <Content Include="Views\Master\PacketItemCat\AddPacketItemCat.aspx" />
+    <Content Include="Views\Master\PacketItemCat\Index.aspx" />
+    <Content Include="Views\Master\Packet\Index.aspx" />
+    <Content Include="Views\Master\Packet\Search.aspx" />
+    <Content Include="Views\Master\Promo\Index.aspx" />
+    <Content Include="Views\Master\Room\Index.aspx" />
+    <Content Include="Views\Master\Supplier\Index.aspx" />
+    <Content Include="Views\Master\Warehouse\Index.aspx" />
     <Content Include="Views\Shared\Error.aspx" />
     <Content Include="Views\Shared\DebugFormSubmission.ascx" />
+    <Content Include="Views\Shared\Js.ascx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Menu.ascx" />
+    <Content Include="Views\Shared\Status.ascx" />
+    <Content Include="Views\Transaction\Accounting\CashForm.ascx" />
+    <Content Include="Views\Transaction\Accounting\CashIn.aspx" />
+    <Content Include="Views\Transaction\Accounting\CashOut.aspx" />
+    <Content Include="Views\Transaction\Accounting\Closing.aspx" />
+    <Content Include="Views\Transaction\Accounting\GeneralLedger.aspx" />
+    <Content Include="Views\Transaction\HR\Absent.aspx" />
+    <Content Include="Views\Transaction\Inventory\Adjusment.aspx" />
+    <Content Include="Views\Transaction\Inventory\Billing.aspx" />
+    <Content Include="Views\Transaction\Inventory\Budgeting.aspx" />
+    <Content Include="Views\Transaction\Inventory\DetailItem.aspx" />
+    <Content Include="Views\Transaction\Inventory\Index.aspx" />
+    <Content Include="Views\Transaction\Inventory\ListBilling.aspx" />
+    <Content Include="Views\Transaction\Inventory\Mutation.aspx" />
+    <Content Include="Views\Transaction\Inventory\Payment.ascx" />
+    <Content Include="Views\Transaction\Inventory\Purchase.aspx" />
+    <Content Include="Views\Transaction\Inventory\Received.aspx" />
+    <Content Include="Views\Transaction\Inventory\ReturPurchase.aspx" />
+    <Content Include="Views\Transaction\Inventory\ReturSales.aspx" />
+    <Content Include="Views\Transaction\Inventory\Sales.aspx" />
+    <Content Include="Views\Transaction\Inventory\TransactionForm.ascx" />
+    <Content Include="Views\Transaction\Inventory\Using.aspx" />
+    <Content Include="Views\Transaction\Report\Report.aspx" />
+    <Content Include="Views\Transaction\Report\ReportParamForm.ascx" />
+    <Content Include="Views\Utility\Shift\Closing.aspx" />
+    <Content Include="Views\Utility\UserAccount\ChangePassword.aspx" />
+    <Content Include="Views\Utility\UserAccount\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Utility\UserAccount\LogOn.aspx" />
+    <Content Include="Views\Utility\UserAccount\Register.aspx" />
+    <Content Include="Views\Utility\UserAdministration\Details.aspx" />
+    <Content Include="Views\Utility\UserAdministration\Index.aspx" />
+    <Content Include="Views\Utility\UserAdministration\Password.aspx" />
+    <Content Include="Views\Utility\UserAdministration\Role.aspx" />
+    <Content Include="Views\Utility\UserAdministration\UsersRoles.aspx" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\jquery-1.4.2.js" />
@@ -165,6 +397,14 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\YTech.IM.SenseCity.ApplicationServices\YTech.IM.SenseCity.ApplicationServices.csproj">
+      <Project>{EA00777D-3D7A-4406-8BFB-E5A90CF0E8A9}</Project>
+      <Name>YTech.IM.SenseCity.ApplicationServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YTech.IM.SenseCity.Enums\YTech.IM.SenseCity.Enums.csproj">
+      <Project>{4E04252B-2B8B-468D-8936-6A7F86568196}</Project>
+      <Name>YTech.IM.SenseCity.Enums</Name>
+    </ProjectReference>
     <ProjectReference Include="..\YTech.IM.SenseCity.Web.Controllers\YTech.IM.SenseCity.Web.Controllers.csproj">
       <Project>{518B2E4B-2B9B-48EF-8736-DDB6A0F78E79}</Project>
       <Name>YTech.IM.SenseCity.Web.Controllers</Name>
@@ -178,6 +418,35 @@
       <Name>YTech.IM.SenseCity.Data</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Transaction\Report\RptAnalyzeBudgetDetail.rdlc" />
+    <Content Include="Views\Transaction\Report\RptBrand.rdlc" />
+    <Content Include="Views\Transaction\Report\RptCommission.rdlc" />
+    <Content Include="Views\Transaction\Report\RptCommissionRecap.rdlc" />
+    <Content Include="Views\Transaction\Report\RptCostCenter.rdlc" />
+    <Content Include="Views\Transaction\Report\RptJournal.rdlc" />
+    <Content Include="Views\Transaction\Report\RptLR.rdlc" />
+    <Content Include="Views\Transaction\Report\RptNeraca.rdlc" />
+    <EmbeddedResource Include="Views\Transaction\Report\RptPrintFacturService.rdlc" />
+    <EmbeddedResource Include="Views\Transaction\Report\RptServiceOmzet.rdlc" />
+    <Content Include="Views\Transaction\Report\RptStockCard.rdlc" />
+    <Content Include="Views\Transaction\Report\RptStockItem.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\MasterPopup.master" />
+    <Content Include="Views\Shared\MyMaster.master" />
+    <Content Include="Views\Shared\ParentMaster.Master" />
+    <Content Include="Views\Shared\UIMaster.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\css\jquery_news_ticker\styles\font\League_Gothic-webfont.eot" />
+    <None Include="Content\css\jquery_news_ticker\styles\font\League_Gothic-webfont.svg" />
+    <None Include="Content\css\jquery_news_ticker\styles\font\League_Gothic-webfont.ttf" />
+    <None Include="Content\css\jquery_news_ticker\styles\font\League_Gothic-webfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Transaction\Report\RptCustomerBirthday.rdlc" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <Target Name="BeforeBuild">
@@ -189,12 +458,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1062</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost:81/SenseCity</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

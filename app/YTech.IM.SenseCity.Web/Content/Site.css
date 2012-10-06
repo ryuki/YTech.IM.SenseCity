@@ -275,3 +275,32 @@ ul#mainMenu li.selected a
     border: 1px solid #ff0000;
     background-color: #ffeeee;
 }
+
+/*logindisplay*/
+
+#logindisplay
+{
+    font-size:1.1em;
+    display:block;
+    text-align:right;
+    margin:10px;
+    color:White;
+}
+
+#logindisplay a:link
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:visited
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:hover
+{
+    color: white;
+    text-decoration: none;
+}

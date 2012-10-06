@@ -17,62 +17,38 @@ namespace YTech.IM.SenseCity.Web.CastleWindsor
             AddCustomRepositoriesTo(container);
             AddApplicationServicesTo(container);
 
-            container.Register(
-                Component
-                    .For(typeof(IValidator))
-                    .ImplementedBy(typeof(Validator))
-                    .Named("validator"));
+            container.AddComponent("validator",
+                typeof(IValidator), typeof(Validator));
         }
 
         private static void AddApplicationServicesTo(IWindsorContainer container)
         {
             container.Register(
-                AllTypes
+                AllTypes.Pick()
                 .FromAssemblyNamed("YTech.IM.SenseCity.ApplicationServices")
-                .Pick()
                 .WithService.FirstInterface());
         }
 
         private static void AddCustomRepositoriesTo(IWindsorContainer container)
         {
             container.Register(
-                AllTypes
+                AllTypes.Pick()
                 .FromAssemblyNamed("YTech.IM.SenseCity.Data")
-                .Pick()
                 .WithService.FirstNonGenericCoreInterface("YTech.IM.SenseCity.Core"));
         }
 
         private static void AddGenericRepositoriesTo(IWindsorContainer container)
         {
-            container.Register(
-                    Component
-                        .For(typeof(IEntityDuplicateChecker))
-                        .ImplementedBy(typeof(EntityDuplicateChecker))
-                        .Named("entityDuplicateChecker"));
-
-            container.Register(
-                    Component
-                        .For(typeof(IRepository<>))
-                        .ImplementedBy(typeof(Repository<>))
-                        .Named("repositoryType"));
-
-            container.Register(
-                    Component
-                        .For(typeof(INHibernateRepository<>))
-                        .ImplementedBy(typeof(NHibernateRepository<>))
-                        .Named("nhibernateRepositoryType"));
-
-            container.Register(
-                    Component
-                        .For(typeof(IRepositoryWithTypedId<,>))
-                        .ImplementedBy(typeof(RepositoryWithTypedId<,>))
-                        .Named("repositoryWithTypedId"));
-
-            container.Register(
-                    Component
-                        .For(typeof(INHibernateRepositoryWithTypedId<,>))
-                        .ImplementedBy(typeof(NHibernateRepositoryWithTypedId<,>))
-                        .Named("nhibernateRepositoryWithTypedId"));
+            container.AddComponent("entityDuplicateChecker",
+                typeof(IEntityDuplicateChecker), typeof(EntityDuplicateChecker));
+            container.AddComponent("repositoryType",
+                typeof(IRepository<>), typeof(Repository<>));
+            container.AddComponent("nhibernateRepositoryType",
+                typeof(INHibernateRepository<>), typeof(NHibernateRepository<>));
+            container.AddComponent("repositoryWithTypedId",
+                typeof(IRepositoryWithTypedId<,>), typeof(RepositoryWithTypedId<,>));
+            container.AddComponent("nhibernateRepositoryWithTypedId",
+                typeof(INHibernateRepositoryWithTypedId<,>), typeof(NHibernateRepositoryWithTypedId<,>));
         }
     }
 }

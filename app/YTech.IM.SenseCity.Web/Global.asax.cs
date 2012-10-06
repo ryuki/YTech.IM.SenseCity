@@ -1,11 +1,14 @@
-﻿using Castle.Windsor;
+﻿using Castle.MicroKernel.Registration;
+using Castle.Windsor;
 using CommonServiceLocator.WindsorAdapter;
 using Microsoft.Practices.ServiceLocation;
-
+using MvcContrib.Castle;
+using NHibernate.Cfg;
 using SharpArch.Data.NHibernate;
 using SharpArch.Web.NHibernate;
 using SharpArch.Web.Castle;
 using SharpArch.Web.Areas;
+using SharpArch.Web.CommonValidator;
 using SharpArch.Web.ModelBinder;
 using SharpArch.Core.NHibernateValidator.ValidatorProvider;
 using System;

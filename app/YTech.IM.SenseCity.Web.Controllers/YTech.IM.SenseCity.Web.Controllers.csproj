@@ -36,20 +36,30 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MvcContrib, Version=2.0.96.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\lib\MvcContrib.dll</HintPath>
     </Reference>
+    <Reference Include="MvcMembership">
+      <HintPath>..\..\lib\MvcMembership.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate.Validator, Version=1.3.0.1001, Culture=neutral, PublicKeyToken=70154e18752585bd, processorArchitecture=MSIL">
       <HintPath>..\..\lib\NHibernate.Validator.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList">
+      <HintPath>..\..\lib\PagedList.dll</HintPath>
     </Reference>
     <Reference Include="SharpArch, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\lib\SharpArch.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -70,12 +80,75 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControllerEnums.cs" />
+    <Compile Include="CRM\CRMAreaRegistration.cs" />
+    <Compile Include="CRM\ReservationController.cs" />
+    <Compile Include="Helper\AccountHelper.cs" />
+    <Compile Include="Helper\CommonHelper.cs" />
+    <Compile Include="Helper\Extensions.cs" />
+    <Compile Include="Helper\ReportViewerHelper.cs" />
     <Compile Include="HomeController.cs" />
     <Compile Include="..\..\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Master\AccountController.cs" />
+    <Compile Include="Master\BrandController.cs" />
+    <Compile Include="Master\CostCenterController.cs" />
+    <Compile Include="Master\CustomerController.cs" />
+    <Compile Include="Master\DepartmentController.cs" />
+    <Compile Include="Master\EmployeeController.cs" />
+    <Compile Include="Master\ItemController.cs" />
+    <Compile Include="Master\MasterAreaRegistration.cs" />
+    <Compile Include="Master\MItemCatController.cs" />
+    <Compile Include="Master\PacketCommController.cs" />
+    <Compile Include="Master\PacketController.cs" />
+    <Compile Include="Master\PacketItemCatController.cs" />
+    <Compile Include="Master\PromoController.cs" />
+    <Compile Include="Master\RoomController.cs" />
+    <Compile Include="Master\SupplierController.cs" />
+    <Compile Include="Master\WarehouseController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RouteRegistrar.cs" />
+    <Compile Include="Transaction\AbstractTransaction.cs" />
+    <Compile Include="Transaction\AccountingController.cs" />
+    <Compile Include="Transaction\HRController.cs" />
+    <Compile Include="Transaction\InventoryController.Accounting.cs" />
+    <Compile Include="Transaction\InventoryController.Billing.cs" />
+    <Compile Include="Transaction\InventoryController.cs" />
+    <Compile Include="Transaction\InventoryController.Stock.cs" />
+    <Compile Include="Transaction\Mutation.cs" />
+    <Compile Include="Transaction\Purchase.cs" />
+    <Compile Include="Transaction\ReportController.cs" />
+    <Compile Include="Transaction\ReturPurchase.cs" />
+    <Compile Include="Transaction\ReturSales.cs" />
+    <Compile Include="Transaction\Sales.cs" />
+    <Compile Include="Transaction\Service.cs" />
+    <Compile Include="Transaction\TransactionAreaRegistration.cs" />
+    <Compile Include="Utility\ShiftController.cs" />
+    <Compile Include="Utility\UserAccountController.cs" />
+    <Compile Include="Utility\UserAdministrationController.cs" />
+    <Compile Include="Utility\UtilityAreaRegistration.cs" />
+    <Compile Include="ViewModel\BillingFormViewModel.cs" />
+    <Compile Include="ViewModel\CashFormViewModel.cs" />
+    <Compile Include="ViewModel\ClosingViewModel.cs" />
+    <Compile Include="ViewModel\DetailItemFormViewModel.cs" />
+    <Compile Include="ViewModel\GeneralLedgerViewModel.cs" />
+    <Compile Include="ViewModel\ReportParamViewModel.cs" />
+    <Compile Include="ViewModel\Reports\CustomerViewModel.cs" />
+    <Compile Include="ViewModel\Reports\JournalDetViewModel.cs" />
+    <Compile Include="ViewModel\Reports\RecAccountViewModel.cs" />
+    <Compile Include="ViewModel\Reports\ServiceOmzetViewModel.cs" />
+    <Compile Include="ViewModel\Reports\ShiftViewModel.cs" />
+    <Compile Include="ViewModel\Reports\StockCardViewModel.cs" />
+    <Compile Include="ViewModel\Reports\StockItemViewModel.cs" />
+    <Compile Include="ViewModel\Reports\TransDetViewModel.cs" />
+    <Compile Include="ViewModel\Reports\TransRoomViewModel.cs" />
+    <Compile Include="ViewModel\Reports\TransViewModel.cs" />
+    <Compile Include="ViewModel\ReservationFormViewModel.cs" />
+    <Compile Include="ViewModel\ShiftFormViewModel.cs" />
+    <Compile Include="ViewModel\TransactionFormViewModel.cs" />
+    <Compile Include="ViewModel\UserAdministration\DetailsViewModel.cs" />
+    <Compile Include="ViewModel\UserAdministration\IndexViewModel.cs" />
+    <Compile Include="ViewModel\UserAdministration\RoleViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\YTech.IM.SenseCity.Core\YTech.IM.SenseCity.Core.csproj">
@@ -85,6 +158,14 @@
     <ProjectReference Include="..\YTech.IM.SenseCity.ApplicationServices\YTech.IM.SenseCity.ApplicationServices.csproj">
       <Project>{EA00777D-3D7A-4406-8BFB-E5A90CF0E8A9}</Project>
       <Name>YTech.IM.SenseCity.ApplicationServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YTech.IM.SenseCity.Data\YTech.IM.SenseCity.Data.csproj">
+      <Project>{63E9AECE-3385-44F0-BDF9-4C01DD3C0647}</Project>
+      <Name>YTech.IM.SenseCity.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YTech.IM.SenseCity.Enums\YTech.IM.SenseCity.Enums.csproj">
+      <Project>{4E04252B-2B8B-468D-8936-6A7F86568196}</Project>
+      <Name>YTech.IM.SenseCity.Enums</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
